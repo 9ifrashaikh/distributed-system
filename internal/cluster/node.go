@@ -182,6 +182,11 @@ func (cm *ClusterManager) GetClusterStats() map[string]interface{} {
 		"nodes":          cm.nodes,
 	}
 }
+func (cm *ClusterManager) GetCurrentNode() *Node {
+	cm.mutex.RLock()
+	defer cm.mutex.RUnlock()
+	return cm.currentNode
+}
 
 // HTTP handlers for cluster management
 func (cm *ClusterManager) HandleNodeRegistration(w http.ResponseWriter, r *http.Request) {

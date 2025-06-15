@@ -9,8 +9,8 @@ import (
 	"sync"
 	"time"
 
-	"github.com/yourusername/distributed-storage-system/internal/cluster"
-	"github.com/yourusername/distributed-storage-system/pkg/models"
+	"github.com/9ifrashaikh/distributed-system/internal/cluster"
+	"github.com/9ifrashaikh/distributed-system/pkg/models"
 )
 
 type ReplicationManager struct {
